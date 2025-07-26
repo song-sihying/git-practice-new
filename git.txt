@@ -67,7 +67,8 @@ git checkout .
 19.合併分支(基本上都是切換master去合併其他分支)
 git checkout master
 git merge test
-
+master=>test
+test=>master
 
 20.合併問題?!
 同時間修改檔案並commit，合併後會產生衝突，需要進行
@@ -101,9 +102,25 @@ git reset --hard c23d272
 26.檢視所有歷程
 git reflog
 
-27.複製專案
+27.綁定雲端網址
+git remote add origin https://github.com/song-sihying/git-demo.git
 
+28.檢視綁定的雲端網址
+git remote -v
 
+29.本地端推送到雲端
+git push  
+
+#忘記時點 git remote -v #去查
+30.複製專案
+git clone https://github.com/song-sihying/git-practice-new.git 
+
+31.git checkout -b test(新增切換一次完成)
+-git branch test
+-git checkout test
+
+32.雲端同步到本地端
+git pull
 
 
 
