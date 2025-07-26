@@ -101,6 +101,8 @@ git reset --hard c23d272
 26.檢視所有歷程
 git reflog
 
+27.複製專案
+
 
 
 
