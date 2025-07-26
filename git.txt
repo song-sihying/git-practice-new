@@ -1,0 +1,131 @@
+1.版本號
+git version 
+
+2.設定全域使用者
+git config --global user.name jerry
+git config --global user.email jerry@gmail.com
+
+3.初始化倉庫
+git init
+
+4.倉庫狀態
+git status
+
+5.加入控管(暫存區)
+git add filename
+git add . (所有變動一次確認)
+
+
+6.四種狀態
+U->Untracked
+U->A (Added)
+A->M (Modified)
+A->D (Deleted)
+
+7.刪除後恢復
+git restore filename
+
+8.檢視暫存區
+git ls-files -s
+
+9.檢閱object
+git cat-file -t (型態) sha1(前六碼)
+             -p (內容) sha1(前六碼)
+
+10.加入倉庫儲存
+git commit -m "加入第一次的檔案儲存"
+git commit -am message
+
+
+11.檢視倉庫狀態
+git log
+git log --oneline
+
+
+12.暫存區檔案恢復工作目錄(U)
+git restore --staged filename 
+
+13.倉庫區檔案恢復工作目錄(U)
+git rm  --cached filename
+
+14.強制刪除(remove)
+git rm -f 4.txt
+
+15.產生分支
+git branch branch-name
+
+16.檢視分支
+git branch
+
+17.切換分支
+git checkout branch-name
+
+
+18.捨棄變更
+git checkout .
+
+19.合併分支(基本上都是切換master去合併其他分支)
+git checkout master
+git merge test
+
+
+20.合併問題?!
+同時間修改檔案並commit，合併後會產生衝突，需要進行
+選擇跟確認
+
+git add .
+git commit -m "完成合併衝突確認"
+
+21.刪除分支
+git branch -D test
+
+22.VIM編輯器用法
+1.使用 git commit 進入
+2.使用 i 進入編輯模式
+3.書寫完畢後使用esc鍵切換到下方命令列
+4.輸入:wq 離開(write+quit)
+5.如果寫入失敗輸入:wq! (!=>強制模式)
+
+23.程式練習
+增加3個檔案跟commit log
+
+24.切換commit-log
+git checkout b14e17
+git checkout master<=切回
+
+25.重置到某一個commit-log
+git reset b14e17 
+
+git reset --hard c23d272
+
+26.檢視所有歷程
+git reflog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
